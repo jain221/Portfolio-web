@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+p    {color: red;}
+</style>
+</head>
+<body>
+
+<h1>All Blogs</h1>
+
+{% for blog in blog %}
+
+<a href="{% url 'blogs:detail' blog.id %}">
+    <h2>{{ blog.title }}</h2>
+</a>
+<h5>{{ blog.date }}</h5>
+<p>{{ blog.description }}</p>
+
+{% endfor %}
+
+</body>
+</html>
